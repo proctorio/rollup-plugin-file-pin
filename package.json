@@ -1,0 +1,44 @@
+{
+	"name": "rollup-plugin-file-pin",
+	"version": "1.0.0",
+	"description": "Fails the build unless a set of files match their pinned hash digests",
+	"main": "./lib/index.cjs",
+	"module": "./lib/index.js",
+	"exports": {
+		".": {
+			"import": "./lib/index.js",
+			"require": "./lib/index.cjs"
+		}
+	},
+	"files": [
+		"lib"
+	],
+	"type": "module",
+	"scripts": {
+		"build": "node build.mjs",
+		"build-linux": "node build.mjs",
+		"build-windows": "node build.mjs",
+		"test": "vitest run",
+		"coverage": "vitest run --coverage",
+		"lint": "eslint --fix --ext .js src/ test/"
+	},
+	"author": "Proctorio",
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/proctorio/rollup-plugin-file-pin.git"
+	},
+	"bugs": {
+		"url": "https://github.com/proctorio/rollup-plugin-file-pin/issues"
+	},
+	"homepage": "https://github.com/proctorio/rollup-plugin-file-pin#readme",
+	"eslintConfig": {
+		"extends": "@proctorio/eslint-config"
+	},
+	"devDependencies": {
+		"@proctorio/eslint-config": "2.5.*",
+		"@vitest/coverage-v8": "4.1.11",
+		"esbuild": "0.25.*",
+		"vitest": "4.1.11"
+	}
+}
