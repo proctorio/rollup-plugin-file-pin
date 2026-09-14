@@ -16,3 +16,6 @@ stages:
 - template: stages/sync/sync.yml@templates  # Template reference
   parameters:
     checkout: rollup-plugin-file-pin
+    # GitHub-side merges auto-publish (Mike-approved 2026-09-13); the
+    # refs/mirror/main echo marker prevents ping-pong.
+    skip_ci: false
