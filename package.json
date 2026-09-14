@@ -36,9 +36,9 @@
 		"extends": "@proctorio/eslint-config"
 	},
 	"devDependencies": {
-		"@proctorio/eslint-config": "2.5.*",
-		"@vitest/coverage-v8": "4.1.11",
-		"esbuild": "0.25.*",
-		"vitest": "4.1.11"
+		"@proctorio/eslint-config": "4.0.*",
+		"@vitest/coverage-v8": "5.0.0",
+		"esbuild": "0.28.*",
+		"vitest": "5.0.0"
 	}
 }
