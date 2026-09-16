@@ -53,3 +53,10 @@ npm run lint
 ## Security
 
 See [SECURITY.md](SECURITY.md) for how to report a vulnerability.
+
+## Contributing
+
+Issues and pull requests are welcome on
+[GitHub](https://github.com/proctorio/rollup-plugin-file-pin). The default
+branch is mirrored from an internal repository; maintainers merge accepted
+pull requests and the mirror picks them up on the next sync.
