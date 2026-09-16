@@ -49,3 +49,7 @@ npm test        # vitest
 npm run coverage
 npm run lint
 ```
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for how to report a vulnerability.
