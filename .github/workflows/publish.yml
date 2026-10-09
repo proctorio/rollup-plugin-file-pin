@@ -8,6 +8,11 @@ on:
   push:
     tags:
       - "release/*"
+  # GitHub skips a tag push when the tagged commit's message contains
+  # [skip ci], so a release cut on such a commit never publishes on its own.
+  # Recover it by running this workflow by hand with the release tag as the
+  # ref; tags cut after this change carry the manual trigger.
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,6 +20,8 @@ permissions:
 
 jobs:
   publish:
+    # The version comes from the tag name, so manual runs must target a tag.
+    if: startsWith(github.ref, 'refs/tags/release/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
